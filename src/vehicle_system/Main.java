@@ -8,6 +8,21 @@ import vehicle_system.vehicles.Vehicle;
 
 import java.util.Scanner;
 
+/*Описание: Создайте систему для управления транспортными средствами (машины, велосипеды, мотоциклы). Каждое транспортное средство должно иметь
+методы для начала движения и остановки. Также должны быть методы для отображения информации о транспортном средстве.
+Требования:
+1. Создайте интерфейс Vehicle, который должен содержать методы:
+◦ void start(): начинает движение.
+◦ void stop(): останавливает движение.
+◦ void displayInfo(): выводит информацию о транспортном средстве.
+2. Создайте три класса, реализующих интерфейс Vehicle:
+◦ Класс Car, который имеет свойство brand (марка машины).
+◦ Класс Bike, который имеет свойство type (тип велосипеда).
+◦ Класс Motorcycle, который имеет свойство engineCapacity (объем двигателя).
+3. Создайте класс Garage, который будет хранить список транспортных средств и предоставлять методы для начала и остановки всех транспортных
+средств в гараже.
+4. Создайте метод main, в котором создайте несколько транспортных средств и добавьте их в гараж. Затем вызовите методы для старта и остановки.
+*/
 public class Main {
 
     public static void main(String[] args) {
@@ -29,17 +44,23 @@ public class Main {
                     "Другое - Выйти из программы управления гаражом\n");
             int type = scn.nextInt();
             switch (type) {
-                case 1: addVehicle(garage, scn);
+                case 1:
+                    addVehicle(garage, scn);
                     break;
-                case 2: garage.startAll();
+                case 2:
+                    garage.startAll();
                     break;
-                case 3: garage.stopAll();
+                case 3:
+                    garage.stopAll();
                     break;
-                case 4: startConcreteVehicle(garage, scn);
+                case 4:
+                    startConcreteVehicle(garage, scn);
                     break;
-                case 5: stopConcreteVehicle(garage, scn);
+                case 5:
+                    stopConcreteVehicle(garage, scn);
                     break;
-                case 6: garage.displayInfo();
+                case 6:
+                    garage.displayInfo();
                     break;
                 default:
                     running = false;

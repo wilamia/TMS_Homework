@@ -11,7 +11,6 @@ public abstract class Hero {
     private int hp;
     private Armor armor;
     private Weapon weapon;
-    private int steps;
     private int countOfCriticalAttacks = 0;
     private int countOfDefaultAttacks = 3;
 
@@ -76,13 +75,6 @@ public abstract class Hero {
         return Math.max(hp, 0);
     }
 
-    public void goRight() {
-        steps++;
-    }
-
-    public void goLeft() {
-        steps--;
-    }
     public void getStats() {
         System.out.printf("Имя: %s\nЗдоровье: %d\nБроня: рейтинг %d, прочность %d\nУрон оружия: %d\n",
                 name, getHp(), armor.getArmorRating(), armor.getDurability(), weapon.getWeaponDamage());

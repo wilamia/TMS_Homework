@@ -1,6 +1,6 @@
 package vehicle_system.vehicles;
 
-public class Car implements Vehicle{
+public class Car implements Vehicle {
     private String brand;
     private boolean isInAction = false;
 

@@ -8,7 +8,7 @@ public class EBook extends Book {
         this.typeOfFormat = typeOfFormat;
     }
 
-    private  String getTypeOfFormat() {
+    private String getTypeOfFormat() {
         return typeOfFormat;
     }
 
